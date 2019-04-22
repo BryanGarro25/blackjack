@@ -1,14 +1,15 @@
 // lista.cpp
-// DefiniciÛn de la clase Lista
+// Definici√≥n de la clase Lista
 
 #include "lista.h"
 
 // Inicializa la lista enlazada, con el nodo inicial apuntando a nullptr
 Lista::Lista() {
 	inicio = nullptr;
+	// prueba
 }
 
-// Llama a la funciÛn borrarLista() para eliminar todos los elementos
+// Llama a la funci√≥n borrarLista() para eliminar todos los elementos
 Lista::~Lista() {
 	borrarLista();
 }
@@ -22,7 +23,7 @@ void Lista::insertarElemento(JugadorGenerico* item) {
 	nuevo->setDato(item);     
 	nuevo->setNext(nullptr);
 	
-	// Si la lista est· vacÌa, el nodo creado se convierte en el primer elemento
+	// Si la lista est√° vac√≠a, el nodo creado se convierte en el primer elemento
 	if (inicio == nullptr)
 		inicio = nuevo;
 	else {                             
@@ -45,7 +46,7 @@ void Lista::borrarLista() {
 	}
 }
 
-// Retorna la direcciÛn de memoria del primer nodo de la lista
+// Retorna la direcci√≥n de memoria del primer nodo de la lista
 Nodo* Lista::getInicio() const {
 	return inicio;
 }
